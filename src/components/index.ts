@@ -17,6 +17,7 @@ import FormItemValue from './FormItem'
 import { TimeSelect } from './Dashboard/components'
 import FullCalendar from './FullCalendar/index.vue'
 import Image from './Image/index.vue'
+import EditDialog from './EditDialog/index.vue'
 
 export default {
     install(app: App) {
@@ -40,6 +41,7 @@ export default {
           .component(TimeSelect.name, TimeSelect)
           .component('FullCalendar', FullCalendar)
           .component('Image', Image)
+          .component('EditDialog', EditDialog)
 
         Object.keys(FormItemValue).forEach(key => {
             app.component(key, FormItemValue[key])
